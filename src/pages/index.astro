@@ -2,53 +2,52 @@
 import "@fontsource-variable/inter";
 import "~/styles/index.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { Image } from 'astro:assets';
-import homeViewImage from '../assets/home-view.png'
-import appStoreDownload from '../assets/app-store-download.svg'
-
+import { Image } from "astro:assets";
+import homeViewImage from "../assets/home-view.png";
+import appStoreDownload from "../assets/app-store-download.svg";
 
 const { generator, site } = Astro;
 const image = new URL("social.jpg", site);
 
 const description =
   "Brote is a clean coffee brew log for people who care about taste and process.";
-
 ---
 
 <!doctype html>
 <BaseLayout>
   <section class="pt-8 md:pt-32">
-    <div class="mx-auto w-full max-w-7xl px-6 grid gap-12 md:grid-cols-2">
-
+    <div class="mx-auto grid w-full max-w-7xl gap-12 px-6 md:grid-cols-2">
       <div>
         <h1 class="mb-8 font-bold text-6xl md:text-8xl">Brote</h1>
 
-        <h2 class="mb-6 font-medium text-3xl md:text-4xl">
-          Brew better cups
-        </h2>
+        <h2 class="mb-6 font-medium text-3xl md:text-4xl">Brew better cups</h2>
 
-        <p class="max-w-lg leading-relaxed text-lg md:text-xl mb-8 md:mb-12">
-          A clean, native SwiftUI coffee brew log for people who care about taste.
+        <p class="mb-8 max-w-lg leading-relaxed text-lg mb-8 md:mb-12 md:text-xl">
+          A clean, native SwiftUI coffee brew log for people who care about
+          taste.
         </p>
 
         <a href="https://testflight.apple.com/join/ee7Nb7DK">
-          <Image src={appStoreDownload} alt="App Store Download Button" class="w-48 h-auto" />
+          <Image
+            src={appStoreDownload}
+            alt="App Store Download Button"
+            class="h-auto w-48"
+          />
         </a>
-
-
       </div>
 
       <div class="flex justify-end md:mt-20">
         <Image
           src={homeViewImage}
           alt="Brote Brews Screen"
-          class="w-64 md:w-80 h-auto"
+          class="h-auto w-64 md:w-80"
         />
       </div>
-
     </div>
 
-    <div class="mx-auto mt-16 w-full max-w-7xl justify-center flex px-6 text-sm font-medium">
+    <div
+      class="mx-auto mt-16 flex w-full max-w-7xl justify-center px-6 text-sm"
+    >
       <a href="/privacy">Privacy Policy</a>
     </div>
   </section>
