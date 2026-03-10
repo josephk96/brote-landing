@@ -1,6 +1,8 @@
 ---
 import "@fontsource-variable/inter";
 import "~/styles/index.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
 
 const { generator, site } = Astro;
 const image = new URL("social.jpg", site);
@@ -10,37 +12,27 @@ const description =
 ---
 
 <!doctype html>
-<html lang="en" class="h-full motion-safe:scroll-smooth">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="/brote-icon.png" type="image/png" />
-    <meta name="generator" content={generator} />
+<BaseLayout>
+      <div class="pt-40">
+        <h1 class="mb-10 font-bold text-6xl md:text-8xl">Brote</h1>
 
-    <title>Brote — Coffee Brew Log</title>
-    <meta name="description" content={description} />
-
-    <meta property="og:title" content="Brote" />
-    <meta property="og:type" content="website" />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content={image} />
-    <meta property="og:url" content={site} />
-    <meta name="twitter:card" content="summary_large_image" />
-  </head>
-
-  <body class="min-h-full bg-[#ec6724] text-black">
-    <main class="flex min-h-screen flex-col pt-40 px-10 md:px-24">
-      <div class="max-w-3xl">
-        <h1 class="mb-10 font-bold text-6xl md:text-8xl">
-          Brote
-        </h1>
-
-        <h2 class="mb-6 font-medium text-3xl md:text-4xl">Track every cup.</h2>
+        <h2 class="mb-6 font-medium text-3xl md:text-4xl">Brew better cups</h2>
 
         <p class="max-w-xl leading-relaxed text-lg md:text-xl">
-          A clean coffee brew log for people who care about taste.
+          A clean, native SwiftUI coffee brew log for people who care about
+          taste.
         </p>
       </div>
-    </main>
-  </body>
-</html>
+
+      <div class="flex flex-1 items-end justify-end pr-40">
+        <img
+          src="/screenshot.png"
+          alt="Brote app screenshot"
+          class="max-w-xs md:max-w-sm"
+        />
+      </div>
+
+      <div class="mt-10 text-sm">
+        <a href="/privacy"> Privacy Policy </a>
+      </div>
+</BaseLayout>
