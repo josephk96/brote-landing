@@ -34,7 +34,7 @@ const jsonLd = {
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </Fragment>
 
-  <section class="pt-8 md:pt-32">
+  <section class="pt-8 md:pt-16">
     <div class="mx-auto grid w-full max-w-7xl gap-12 px-6 md:grid-cols-2">
       <div>
         <h1 class="mb-8 font-bold text-6xl md:text-8xl">Brote</h1>
@@ -58,13 +58,13 @@ const jsonLd = {
         <Image
           src={homeViewImage}
           alt="Brote app brew list showing coffee brews grouped by date with ratings"
-          class="h-auto w-64 md:w-80"
+          class="h-auto w-80 md:w-96"
         />
       </div>
     </div>
   </section>
 
-  <div class="mt-auto py-6 px-6 text-sm">
-    <a href="/privacy">Privacy Policy</a>
-  </div>
+  <!--<div class="mt-auto py-6 px-6 text-sm">-->
+  <!--  <a href="/privacy">Privacy Policy</a>-->
+  <!--</div>-->
 </BaseLayout>
