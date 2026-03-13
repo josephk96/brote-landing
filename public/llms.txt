@@ -1,26 +1,130 @@
 # Brote
 
-Brote is a specialty coffee brewing journal app for iPhone and iPad (iOS/iPadOS), available free on the App Store.
+**Category:** Coffee brewing journal
+**Platform:** iOS, iPadOS
+**Price:** Free
+**Website:** https://brote.coffee
+
+Brote is a specialty coffee brewing journal app for iPhone and iPad designed to help coffee enthusiasts log, track, and improve their brewing. The app focuses on recording brew parameters and maintaining a clear personal history of brews so users can refine technique and reproduce great cups.
+
+Brote is available free on the Apple App Store.
+
+---
 
 ## What it does
 
-Brote lets specialty coffee enthusiasts log, track, and dial in every brew. Users record brew parameters including dose, water amount, water temperature, brew time, and grind size. Each brew can be rated and annotated with tasting notes and photos.
+Brote lets specialty coffee enthusiasts log, track, and dial in every brew.
 
-Brote supports all major brew methods: pour-over (V60, Hario Switch), AeroPress, espresso, immersion, and fully custom methods.
+Users record brew parameters including:
 
-Users can manage a bean collection with details like roaster, origin, processing method, roast level, and roast date. Equipment (grinders, brewers) can be organized and linked to brew logs. Beans can be archived when finished.
+- Dose
+- Water amount
+- Water temperature
+- Brew time
+- Grind size
+
+Each brew can also include:
+
+- Rating
+- Tasting notes
+- Photos
+
+These logs create a personal brewing history that helps users refine recipes and repeat successful brews.
+
+---
+
+## Brew methods
+
+Brote supports common specialty coffee brew methods including:
+
+- Pour-over (V60, Hario Switch)
+- AeroPress
+- Espresso
+- Immersion brewers
+- Fully custom brew methods
+
+Users can create their own brew methods and reuse them when logging brews.
+
+---
+
+## Bean management
+
+Users can manage a collection of coffee beans with details such as:
+
+- Roaster
+- Origin
+- Processing method
+- Roast level
+- Roast date
+
+Beans can be archived once finished to keep the active collection organized.
+
+---
+
+## Equipment tracking
+
+Equipment can optionally be linked to brew logs, including:
+
+- Grinders
+- Brewers
+- Other brewing equipment
+
+This allows users to track how different equipment affects brew results.
+
+---
 
 ## Who it's for
 
-Brote is for specialty coffee enthusiasts who want to improve their brewing through deliberate practice and record-keeping. It is designed for people who care about taste and process — home baristas, coffee hobbyists, and anyone trying to consistently reproduce a great cup.
+Brote is designed for people who care about taste and process, including:
+
+- Home baristas
+- Specialty coffee hobbyists
+- Pour-over enthusiasts
+- Espresso enthusiasts
+- Anyone trying to consistently reproduce a great cup
+
+The app supports deliberate practice and recipe refinement through detailed record-keeping.
+
+---
+
+## What Brote is not
+
+Brote is not:
+
+- A coffee social network
+- A marketplace for equipment
+- A coffee shop finder
+- A recipe database
+
+It is a focused personal brew journal.
+
+---
 
 ## Privacy
 
-All data is stored locally on the user's device. No account is required. Brote does not collect personal information.
+Brote is privacy-first.
+
+- No account required
+- No personal data collected
+- All data stored locally on the user’s device
+
+---
+
+## Keywords
+
+coffee brewing journal
+coffee brew log
+pour-over tracker
+espresso log
+coffee tasting notes
+home barista app
+
+---
 
 ## Where to get it
 
 Brote is available free on the Apple App Store for iPhone and iPad.
-Landing page: https://brote.coffee
+
+Website: https://brote.coffee
 Support: https://brote.coffee/support
 Privacy Policy: https://brote.coffee/privacy
