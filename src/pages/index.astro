@@ -6,15 +6,34 @@ import { Image } from "astro:assets";
 import homeViewImage from "../assets/home-view.png";
 import appStoreDownload from "../assets/app-store-download.svg";
 
-const { generator, site } = Astro;
-const image = new URL("social.jpg", site);
+const { site } = Astro;
 
+const title = "Brote - Specialty Coffee Brew Journal for iPhone & iPad";
 const description =
-  "Brote is a clean coffee brew log for people who care about taste and process.";
+  "Stop forgetting what worked. Brote is a free pour-over, AeroPress, and espresso brew journal for iPhone and iPad. Log dose, grind size, water temperature, and brew time. Manage your bean collection. Dial in every cup.";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Brote",
+  operatingSystem: "iOS, iPadOS",
+  applicationCategory: "FoodAndDrinkApplication",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+  },
+  description:
+    "A specialty coffee brewing journal for iPhone and iPad. Log brew parameters (dose, water, temperature, time, grind size), manage your bean collection, organize equipment, and rate brews with tasting notes. Supports pour-over (V60, Hario Switch), AeroPress, espresso, immersion, and custom brew methods. All data stored locally — no account required.",
+  url: site,
+};
 ---
 
-<!doctype html>
-<BaseLayout>
+<BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </Fragment>
+
   <section class="pt-8 md:pt-32">
     <div class="mx-auto grid w-full max-w-7xl gap-12 px-6 md:grid-cols-2">
       <div>
@@ -22,15 +41,14 @@ const description =
 
         <h2 class="mb-6 font-medium text-3xl md:text-4xl">Brew better cups</h2>
 
-        <p class="mb-8 max-w-lg leading-relaxed text-lg mb-8 md:mb-12 md:text-xl">
-          A clean, native SwiftUI coffee brew log for people who care about
-          taste.
+        <p class="mb-8 max-w-lg leading-relaxed text-lg md:mb-12 md:text-xl">
+          A clean, native SwiftUI coffee brew log for people who care about taste.
         </p>
 
         <a href="https://testflight.apple.com/join/ee7Nb7DK">
           <Image
             src={appStoreDownload}
-            alt="App Store Download Button"
+            alt="Download Brote on the App Store"
             class="h-auto w-48"
           />
         </a>
@@ -39,7 +57,7 @@ const description =
       <div class="flex justify-end md:mt-20">
         <Image
           src={homeViewImage}
-          alt="Brote Brews Screen"
+          alt="Brote app brew list showing coffee brews grouped by date with ratings"
           class="h-auto w-64 md:w-80"
         />
       </div>

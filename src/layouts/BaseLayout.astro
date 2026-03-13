@@ -2,11 +2,14 @@
 import "@fontsource-variable/inter";
 import "~/styles/index.css";
 
-const { generator, site } = Astro;
-const image = new URL("social.jpg", site);
+const {
+  title = "Brote - Specialty Coffee Brew Journal for iPhone & iPad",
+  description = "Brote is a free specialty coffee brewing journal for iPhone and iPad. Log brew parameters, manage your bean collection, track grind size and dose, and improve every cup.",
+} = Astro.props;
 
-const description =
-  "Brote is a clean coffee brew log for people who care about taste and process.";
+const { site } = Astro;
+const image = new URL("social.jpg", site);
+const canonical = new URL(Astro.url.pathname, site);
 ---
 
 <!doctype html>
@@ -16,19 +19,26 @@ const description =
     <meta name="viewport" content="width=device-width" />
 
     <link rel="icon" href="/brote-icon.png" type="image/png" />
+    <link rel="canonical" href={canonical} />
 
-    <meta name="generator" content={generator} />
+    <meta name="robots" content="index, follow" />
 
-    <title>Brote</title>
+    <title>{title}</title>
     <meta name="description" content={description} />
 
-    <meta property="og:title" content="Brote" />
+    <meta property="og:title" content={title} />
     <meta property="og:type" content="website" />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={image} />
-    <meta property="og:url" content={site} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content="Brote" />
 
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+
+    <slot name="head" />
   </head>
 
   <body class="bg-[#ec6724] text-black">
